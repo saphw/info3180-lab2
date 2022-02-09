@@ -5,8 +5,10 @@ Werkzeug Documentation:  https://werkzeug.palletsprojects.com/
 This file creates your application.
 """
 
+from ast import FormattedValue
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+from datetime import date
 
 
 ###
@@ -24,10 +26,16 @@ def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
+"""
+def format_date_joined():
+    return date_joined.strftime("%M, %Y")
+"""
+
+date_= "to be completed"
 @app.route('/profile')
-def profile():
+def profile(date_):
     """Render website's profile page."""
-    return render_template('profile.html')
+    return render_template('profile.html',date_)
 
 ###
 # The functions below should be applicable to all Flask apps.
