@@ -8,7 +8,6 @@ This file creates your application.
 from ast import FormattedValue
 from app import app
 from flask import render_template, request, redirect, url_for, flash
-from datetime import date
 
 
 ###
@@ -31,11 +30,11 @@ def format_date_joined():
     return date_joined.strftime("%M, %Y")
 """
 
-date_= "to be completed"
-@app.route('/profile')
-def profile(date_):
+
+@app.route('/profile/')
+def profile(d_j ="January 2020"):
     """Render website's profile page."""
-    return render_template('profile.html',date_)
+    return render_template('profile.html', date_joined= d_j)
 
 ###
 # The functions below should be applicable to all Flask apps.

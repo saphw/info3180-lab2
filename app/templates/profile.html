@@ -3,20 +3,17 @@
 
 {% block main %}
 
-{{ url_for('static',filename = 'static/css') }}
-
 <div class="profile_card">
     <div class="profcard">
-        <img src="" alt="">
         <h1>Mary Jane</h1>
-        <h2>@mjane <br> Kingston,Jamaica <br> Joined {{ date_}}</h2>
+        <p>@mjane <br> Kingston,Jamaica <br> Joined {{date_joined}} </p>
     </div>
     <div class="content">
-        <p>I am smart and talented young woman who loves website design and development. Contact me if you'd like to work together on a new project.</p>
+        <p>I am smart and talented young woman who loves website design and development. <br> Contact me if you'd like to work together on a new project.</p>
         <div class="stats">
-            <div> <em>7</em> Posts </div>
-            <div> <em>100</em> Following </div>
-            <div> <em>250</em> Followers </div>
+            <div> <strong>7</strong> Posts </div>
+            <div> <strong>100</strong> Following </div>
+            <div> <strong>250</strong> Followers </div>
             
         </div>
         <button class="follow">Follow</button>
